@@ -3,20 +3,20 @@ package com.blankspace.sort;
 public class HeapSort implements SortInterface {
 
     @Override
-    public void sort(int[] record) {
-        int length = record.length, temp = 0;
+    public void sort(int[] records) {
+        int length = records.length, temp = 0;
         // 从最后一个分支节点至根结点
         for (int index = length / 2 - 1; index >= 0; index--) {
-            sift(record, index, length - 1);
+            sift(records, index, length - 1);
         }
         for (int i = 1; i < length; i++) {
             // 暂存最大元素
-            temp = record[0];
+            temp = records[0];
             // 最右叶子放到根结点
-            record[0] = record[length - i];
-            record[length - i] = temp;
+            records[0] = records[length - i];
+            records[length - i] = temp;
             // 对 r[0]~r[length-i-1]建堆
-            sift(record, 0, length - i - 1);
+            sift(records, 0, length - i - 1);
         }
     }
 
