@@ -3,9 +3,10 @@ package com.blankspace.sort;
 public class MergeSortRecursion implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int length = records.length;
         mergeSort(records, length, 0, length - 1);
+        return records;
     }
 
     public void mergeSort(int[] record, int length, int first, int last) {

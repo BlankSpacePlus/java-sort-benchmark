@@ -3,7 +3,7 @@ package com.blankspace.sort;
 public class ShellSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int length = records.length, temp, position;
         // 增量为d时直接插入排序
         for (int d = length / 2; d >= 1; d /= 2) {
@@ -17,6 +17,7 @@ public class ShellSort implements SortInterface {
                 records[position] = temp;
             }
         }
+        return records;
     }
 
 }

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import com.blankspace.sort.util.DataGenerator;
 
-public class SortUnitTest {
+public class SortRandomUnitTest {
 
     @Test
     public void bubbleSortTest() {

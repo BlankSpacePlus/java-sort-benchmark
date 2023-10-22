@@ -3,9 +3,10 @@ package com.blankspace.sort;
 public class QuickSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int length = records.length;
         quickSort(records, 0, length - 1);
+        return records;
     }
 
     private void quickSort(int[] record, int first, int end) {

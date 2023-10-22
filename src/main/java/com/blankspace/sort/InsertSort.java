@@ -3,7 +3,7 @@ package com.blankspace.sort;
 public class InsertSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int length = records.length, temp, position;
         // 排序进行length-1趟
         for (int i = 1; i < length; i++) {
@@ -17,6 +17,7 @@ public class InsertSort implements SortInterface {
             // 插入元素
             records[position] = temp;
         }
+        return records;
     }
 
 }

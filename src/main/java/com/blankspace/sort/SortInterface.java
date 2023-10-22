@@ -2,6 +2,6 @@ package com.blankspace.sort;
 
 public interface SortInterface {
 
-    void sort(int[] records);
+    int[] sort(int[] records);
 
 }

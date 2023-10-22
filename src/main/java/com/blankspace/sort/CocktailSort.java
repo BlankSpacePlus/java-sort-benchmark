@@ -3,7 +3,7 @@ package com.blankspace.sort;
 public class CocktailSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int tmp = 0;
         for (int i = 0; i < records.length/2; i++) {
             // 有序标记，每一轮初始值都是true
@@ -37,6 +37,7 @@ public class CocktailSort implements SortInterface {
                 break;
             }
         }
+        return records;
     }
 
 }

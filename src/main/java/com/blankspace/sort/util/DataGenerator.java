@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class DataGenerator {
 
-    private static final int RECORDS_LENGTH = 100;
+    private static final int RECORDS_LENGTH = 10000;
 
     private static final int RECORD_MAX_VALUE = 999999;
 

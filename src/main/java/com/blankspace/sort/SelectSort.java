@@ -3,7 +3,7 @@ package com.blankspace.sort;
 public class SelectSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int length = records.length, index, temp;
         // n-1趟的简单排序
         for (int i = 0; i < length; i++) {
@@ -20,6 +20,7 @@ public class SelectSort implements SortInterface {
                 records[index] = temp;
             }
         }
+        return records;
     }
 
 }

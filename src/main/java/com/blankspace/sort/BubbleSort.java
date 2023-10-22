@@ -3,7 +3,7 @@ package com.blankspace.sort;
 public class BubbleSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         // 第一趟冒泡排序的区间是r[0]~r[length-1]
         int length = records.length, exchange = length - 1;
         int position, bound, temp;
@@ -21,6 +21,7 @@ public class BubbleSort implements SortInterface {
                 }
             }
         }
+        return records;
     }
 
 }

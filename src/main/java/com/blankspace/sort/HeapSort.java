@@ -3,7 +3,7 @@ package com.blankspace.sort;
 public class HeapSort implements SortInterface {
 
     @Override
-    public void sort(int[] records) {
+    public int[] sort(int[] records) {
         int length = records.length, temp = 0;
         // 从最后一个分支节点至根结点
         for (int index = length / 2 - 1; index >= 0; index--) {
@@ -18,6 +18,7 @@ public class HeapSort implements SortInterface {
             // 对 r[0]~r[length-i-1]建堆
             sift(records, 0, length - i - 1);
         }
+        return records;
     }
 
     /**
