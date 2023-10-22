@@ -22,13 +22,13 @@ import com.blankspace.sort.util.DataGenerator;
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-public class SortRandomBenchmark {
+public class SortReversedBenchmark {
 
     private int[] records;
 
     @Setup(value = Level.Invocation)
     public void setUpInvocation() {
-        this.records = DataGenerator.getRandomRecords();
+        this.records = DataGenerator.getReversedRecords();
     }
 
     @Benchmark

@@ -1,5 +1,7 @@
 package com.blankspace.sort.util;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 
 public class DataGenerator {
@@ -16,6 +18,14 @@ public class DataGenerator {
         for (int i = 0; i < RECORDS_LENGTH; i++) {
             records[i] = random.nextInt(2 * (RECORD_MAX_VALUE + 1)) - RECORD_MAX_VALUE;
         }
+        return records;
+    }
+
+    public static int[] getReversedRecords() {
+        int[] records = getRandomRecords();
+        Integer[] boxedArray = Arrays.stream(records).boxed().toArray(Integer[]::new);
+        Arrays.sort(boxedArray, Comparator.reverseOrder());
+        records = Arrays.stream(boxedArray).mapToInt(Integer::intValue).toArray();
         return records;
     }
 

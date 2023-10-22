@@ -1,6 +1,6 @@
 package com.blankspace.sort;
 
-public class QuickSort implements SortInterface {
+public class QuickSortRecursion implements SortInterface {
 
     @Override
     public int[] sort(int[] records) {
@@ -9,14 +9,14 @@ public class QuickSort implements SortInterface {
         return records;
     }
 
-    private void quickSort(int[] record, int first, int end) {
+    private void quickSort(int[] records, int first, int end) {
         if (first < end) {
             // 一次划分
-            int pivot = partition(record, first, end);
+            int pivot = partition(records, first, end);
             // 对左侧子序列快速排序
-            quickSort(record, first, pivot - 1);
+            quickSort(records, first, pivot - 1);
             // 对右侧子序列快速排序
-            quickSort(record, pivot + 1, end);
+            quickSort(records, pivot + 1, end);
         }
     }
 
@@ -27,30 +27,30 @@ public class QuickSort implements SortInterface {
      * @param last  区间右下标
      * @return 中轴
      */
-    private int partition(int[] record, int first, int last) {
+    private int partition(int[] records, int first, int last) {
         // 初始化一次划分区间
         int i = first, j = last, temp;
         while (i < j) {
             // 右侧扫描
-            while (i < j && record[i] <= record[j]) {
+            while (i < j && records[i] <= records[j]) {
                 j--;
             }
             // 将较小记录交换到前面
             if (i < j) {
-                temp = record[i];
-                record[i] = record[j];
-                record[j] = temp;
+                temp = records[i];
+                records[i] = records[j];
+                records[j] = temp;
                 i++;
             }
             // 左侧扫描
-            while (i < j && record[i] <= record[j]) {
+            while (i < j && records[i] <= records[j]) {
                 i++;
             }
             // 将较大记录交换到后面
             if (i < j) {
-                temp = record[i];
-                record[i] = record[j];
-                record[j] = temp;
+                temp = records[i];
+                records[i] = records[j];
+                records[j] = temp;
                 j--;
             }
         }

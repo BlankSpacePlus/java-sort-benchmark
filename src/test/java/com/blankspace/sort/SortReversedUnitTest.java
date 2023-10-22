@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 
 import com.blankspace.sort.util.DataGenerator;
 
-public class SortRandomUnitTest {
+public class SortReversedUnitTest {
 
     @Test
     public void bubbleSortTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new BubbleSort();
         sorter.sort(actualRecords);
@@ -21,7 +21,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void cocktailSortTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new CocktailSort();
         sorter.sort(actualRecords);
@@ -31,7 +31,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void heapSortTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new HeapSort();
         sorter.sort(actualRecords);
@@ -41,7 +41,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void insertSortTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new InsertSort();
         sorter.sort(actualRecords);
@@ -51,7 +51,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void mergeSortIterationTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new MergeSortIteration();
         sorter.sort(actualRecords);
@@ -61,7 +61,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void mergeSortRecursionTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new MergeSortRecursion();
         sorter.sort(actualRecords);
@@ -71,7 +71,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void quickSortIterationTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new QuickSortIteration();
         sorter.sort(actualRecords);
@@ -81,7 +81,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void quickSortRecursionTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new QuickSortRecursion();
         sorter.sort(actualRecords);
@@ -91,7 +91,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void selectSortTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new SelectSort();
         sorter.sort(actualRecords);
@@ -101,7 +101,7 @@ public class SortRandomUnitTest {
 
     @Test
     public void shellSortTest() {
-        int[] actualRecords = DataGenerator.getRandomRecords();
+        int[] actualRecords = DataGenerator.getReversedRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
         SortInterface sorter = new ShellSort();
         sorter.sort(actualRecords);

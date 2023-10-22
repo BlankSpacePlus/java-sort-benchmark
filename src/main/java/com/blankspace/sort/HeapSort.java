@@ -26,7 +26,7 @@ public class HeapSort implements SortInterface {
      * @param key 待调整节点
      * @param last 右侧端点
      */
-    private void sift(int[] record, int key, int last) {
+    private void sift(int[] records, int key, int last) {
         // 暂存变量
         int temp;
         // siftNode为待调整结点
@@ -35,17 +35,17 @@ public class HeapSort implements SortInterface {
         int max = 2 * siftNode + 1;
         while (max <= last) {
             // 选取左右孩子较大者
-            if (max < last && record[max] < record[max + 1]) {
+            if (max < last && records[max] < records[max + 1]) {
                 max++;
             }
             // 已经是堆
-            if (record[siftNode] > record[max]) {
+            if (records[siftNode] > records[max]) {
                 break;
             } else {
                 // 待调整结点与max互换
-                temp = record[siftNode];
-                record[siftNode] = record[max];
-                record[max] = temp;
+                temp = records[siftNode];
+                records[siftNode] = records[max];
+                records[max] = temp;
                 // siftNode、max重新赋值，准备下一趟调整
                 siftNode = max;
                 max = 2 * siftNode + 1;
