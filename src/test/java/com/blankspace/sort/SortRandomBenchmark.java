@@ -91,6 +91,13 @@ public class SortRandomBenchmark {
         blackhole.consume(new ShellSort().sort(shellRecords));
     }
 
+    @Benchmark
+    public void measureJavaDefaultSort(Blackhole blackhole) {
+        int[] defaultRecords = Arrays.copyOf(records, records.length);
+        Arrays.sort(defaultRecords);
+        blackhole.consume(defaultRecords);
+    }
+
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(SortRandomBenchmark.class.getSimpleName())
