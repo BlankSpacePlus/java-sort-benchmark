@@ -19,6 +19,19 @@ Sort Algorithm Implements:
     - [Merge Sort Iteration](./src/main/java/com/blankspace/sort/MergeSortIteration.java)
     - [Merge Sort Recursion](./src/main/java/com/blankspace/sort/MergeSortRecursion.java)
 
+## Data Generation
+
+Proper test data is the basis for effective testing. 
+
+Unfortunately, this work does not yet provide a set of standardized test data (contributions are welcome).
+
+I can provide several ideas for obtaining test data:
+1. Generate a large number of random numbers within a specific range based on the programming language's support for random numbers.
+2. Generate targeted unfavorable data based on the deep principles of the sorting algorithm. (For example, the data is supplied to the quick sort algorithm in full reverse order.)
+3. Refer to the test cases of online algorithm question programming platforms such as LeetCode to build a series of effective test case collections.
+4. Based on deep learning LLM, certain methods are used to output a large number of high-quality test cases.
+5. ......
+
 ## Unit Test
 
 JUnit 5 is the next generation of JUnit. The goal is to create an up-to-date foundation 
