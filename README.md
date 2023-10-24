@@ -32,6 +32,14 @@ I can provide several ideas for obtaining test data:
 4. Based on deep learning LLM, certain methods are used to output a large number of high-quality test cases.
 5. ......
 
+## JMH Profiler
+
+I use 4 JMH Profilers:
+- **StackProfiler**: StackProfiler outputs stack information and thread status information during code execution.
+- **GcProfiler**: GcProfiler outputs the time spent by the garbage collector on each memory space of the JVM during code execution.
+- **ClassLoaderProfiler**: ClassLoaderProfiler outputs the number of classes loaded and unloaded during code execution (Warmup should be set to 0 at this time).
+- **CompilerProfiler**: CompilerProfiler outputs the optimization time spent by the JIT compiler during code execution.
+
 ## Unit Test
 
 JUnit 5 is the next generation of JUnit. The goal is to create an up-to-date foundation 
