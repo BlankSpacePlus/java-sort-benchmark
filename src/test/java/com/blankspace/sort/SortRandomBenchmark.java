@@ -36,7 +36,7 @@ public class SortRandomBenchmark {
 
     private int[] records;
 
-    @Setup(value = Level.Invocation)
+    @Setup(value = Level.Trial)
     public void setUpInvocation() {
         this.records = DataGenerator.getRandomRecords();
     }
