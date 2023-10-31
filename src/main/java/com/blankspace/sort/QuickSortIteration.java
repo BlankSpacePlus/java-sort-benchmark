@@ -4,6 +4,23 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class QuickSortIteration implements SortInterface {
+
+    private volatile static SortInterface sortInstance;
+
+    private QuickSortIteration() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (QuickSortIteration.class) {
+                if (sortInstance == null) {
+                    sortInstance = new QuickSortIteration();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         if (records == null || records.length == 0) {

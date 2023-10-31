@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class InsertSort implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private InsertSort() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (InsertSort.class) {
+                if (sortInstance == null) {
+                    sortInstance = new InsertSort();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int length = records.length, temp, position;

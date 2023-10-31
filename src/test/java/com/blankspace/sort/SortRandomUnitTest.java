@@ -13,7 +13,7 @@ public class SortRandomUnitTest {
     public void bubbleSortTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new BubbleSort();
+        SortInterface sorter = BubbleSort.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -23,7 +23,7 @@ public class SortRandomUnitTest {
     public void cocktailSortTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new CocktailSort();
+        SortInterface sorter = CocktailSort.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -33,7 +33,7 @@ public class SortRandomUnitTest {
     public void heapSortTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new HeapSort();
+        SortInterface sorter = HeapSort.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -43,7 +43,7 @@ public class SortRandomUnitTest {
     public void insertSortTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new InsertSort();
+        SortInterface sorter = InsertSort.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -53,7 +53,7 @@ public class SortRandomUnitTest {
     public void mergeSortIterationTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new MergeSortIteration();
+        SortInterface sorter = MergeSortIteration.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -63,7 +63,7 @@ public class SortRandomUnitTest {
     public void mergeSortRecursionTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new MergeSortRecursion();
+        SortInterface sorter = MergeSortRecursion.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -73,7 +73,7 @@ public class SortRandomUnitTest {
     public void quickSortIterationTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new QuickSortIteration();
+        SortInterface sorter = QuickSortIteration.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -83,7 +83,7 @@ public class SortRandomUnitTest {
     public void quickSortRecursionTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new QuickSortRecursion();
+        SortInterface sorter = QuickSortRecursion.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -93,7 +93,7 @@ public class SortRandomUnitTest {
     public void selectSortTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new SelectSort();
+        SortInterface sorter = SelectSort.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);
@@ -103,7 +103,7 @@ public class SortRandomUnitTest {
     public void shellSortTest() {
         int[] actualRecords = DataGenerator.getRandomRecords();
         int[] expectedRecords = Arrays.copyOf(actualRecords, actualRecords.length);
-        SortInterface sorter = new ShellSort();
+        SortInterface sorter = ShellSort.getInstance();
         sorter.sort(actualRecords);
         Arrays.sort(expectedRecords);
         Assertions.assertArrayEquals(expectedRecords, actualRecords);

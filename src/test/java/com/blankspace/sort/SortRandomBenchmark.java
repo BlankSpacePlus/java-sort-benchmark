@@ -44,61 +44,61 @@ public class SortRandomBenchmark {
     @Benchmark
     public void measureBubbleSort(Blackhole blackhole) {
         int[] bubbleRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new BubbleSort().sort(bubbleRecords));
+        blackhole.consume(BubbleSort.getInstance().sort(bubbleRecords));
     }
 
     @Benchmark
     public void measureCocktailSort(Blackhole blackhole) {
         int[] cocktailRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new CocktailSort().sort(cocktailRecords));
+        blackhole.consume(CocktailSort.getInstance().sort(cocktailRecords));
     }
 
     @Benchmark
     public void measureHeapSort(Blackhole blackhole) {
         int[] heapRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new HeapSort().sort(heapRecords));
+        blackhole.consume(HeapSort.getInstance().sort(heapRecords));
     }
 
     @Benchmark
     public void measureInsertSort(Blackhole blackhole) {
         int[] insertRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new InsertSort().sort(insertRecords));
+        blackhole.consume(InsertSort.getInstance().sort(insertRecords));
     }
 
     @Benchmark
     public void measureMergeSortIteration(Blackhole blackhole) {
         int[] mergeRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new MergeSortIteration().sort(mergeRecords));
+        blackhole.consume(MergeSortIteration.getInstance().sort(mergeRecords));
     }
 
     @Benchmark
     public void measureMergeSortRecursion(Blackhole blackhole) {
         int[] mergeRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new MergeSortRecursion().sort(mergeRecords));
+        blackhole.consume(MergeSortRecursion.getInstance().sort(mergeRecords));
     }
 
     @Benchmark
     public void measureQuickSortIteration(Blackhole blackhole) {
         int[] quickRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new QuickSortIteration().sort(quickRecords));
+        blackhole.consume(QuickSortIteration.getInstance().sort(quickRecords));
     }
 
     @Benchmark
     public void measureQuickSortRecursion(Blackhole blackhole) {
         int[] quickRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new QuickSortRecursion().sort(quickRecords));
+        blackhole.consume(QuickSortRecursion.getInstance().sort(quickRecords));
     }
 
     @Benchmark
     public void measureSelectSort(Blackhole blackhole) {
         int[] selectRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new SelectSort().sort(selectRecords));
+        blackhole.consume(SelectSort.getInstance().sort(selectRecords));
     }
 
     @Benchmark
     public void measureShellSort(Blackhole blackhole) {
         int[] shellRecords = Arrays.copyOf(records, records.length);
-        blackhole.consume(new ShellSort().sort(shellRecords));
+        blackhole.consume(ShellSort.getInstance().sort(shellRecords));
     }
 
     @Benchmark

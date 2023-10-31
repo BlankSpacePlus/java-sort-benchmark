@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class QuickSortRecursion implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private QuickSortRecursion() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (QuickSortRecursion.class) {
+                if (sortInstance == null) {
+                    sortInstance = new QuickSortRecursion();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int length = records.length;

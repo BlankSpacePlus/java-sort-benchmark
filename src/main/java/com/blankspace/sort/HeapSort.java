@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class HeapSort implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private HeapSort() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (HeapSort.class) {
+                if (sortInstance == null) {
+                    sortInstance = new HeapSort();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int length = records.length, temp = 0;

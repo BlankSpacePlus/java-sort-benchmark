@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class CocktailSort implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private CocktailSort() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (CocktailSort.class) {
+                if (sortInstance == null) {
+                    sortInstance = new CocktailSort();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int tmp = 0;

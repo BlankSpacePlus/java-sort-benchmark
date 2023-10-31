@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class ShellSort implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private ShellSort() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (ShellSort.class) {
+                if (sortInstance == null) {
+                    sortInstance = new ShellSort();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int length = records.length, temp, position;

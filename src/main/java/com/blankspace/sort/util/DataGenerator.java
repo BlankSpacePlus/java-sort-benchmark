@@ -22,6 +22,9 @@ public class DataGenerator {
 
     private static final String RECORDS_DICTIONARY_PATH = "src/main/resources/cases/";
 
+    private DataGenerator() {
+    }
+
     public static int[] getRandomRecords() {
         Random random = new Random();
         int[] records = new int[RECORDS_LENGTH];

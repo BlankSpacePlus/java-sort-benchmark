@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class MergeSortRecursion implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private MergeSortRecursion() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (MergeSortRecursion.class) {
+                if (sortInstance == null) {
+                    sortInstance = new MergeSortRecursion();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int length = records.length;

@@ -1,4 +1,4 @@
-# Java Basic Sort Algorithm Benchmark
+# Java Basic Sort Algorithm MicroBenchmark
 
 ## Sort Algorithm
 

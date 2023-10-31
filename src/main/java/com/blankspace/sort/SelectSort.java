@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class SelectSort implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private SelectSort() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (SelectSort.class) {
+                if (sortInstance == null) {
+                    sortInstance = new SelectSort();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         int length = records.length, index, temp;

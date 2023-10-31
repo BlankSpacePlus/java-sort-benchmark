@@ -2,6 +2,22 @@ package com.blankspace.sort;
 
 public class BubbleSort implements SortInterface {
 
+    private volatile static SortInterface sortInstance;
+
+    private BubbleSort() {
+    }
+
+    public static SortInterface getInstance() {
+        if (sortInstance == null) {
+            synchronized (BubbleSort.class) {
+                if (sortInstance == null) {
+                    sortInstance = new BubbleSort();
+                }
+            }
+        }
+        return sortInstance;
+    }
+
     @Override
     public int[] sort(int[] records) {
         // 第一趟冒泡排序的区间是r[0]~r[length-1]
